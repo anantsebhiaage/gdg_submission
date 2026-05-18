@@ -10,7 +10,7 @@ import AICommentaryTicker from "./components/AICommentaryTicker";
 import PredictionZone from "./components/PredictionZone";
 import AdminPanel from "./components/AdminPanel";
 
-const SOCKET_URL = "http://localhost:5000";
+const SOCKET_URL = "https://fanzone-web-service.onrender.com";
 
 function getGuestUser() {
   let u = localStorage.getItem("fanzone_username");
