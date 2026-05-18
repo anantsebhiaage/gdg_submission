@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+:root {
+  --pastel-sage: #A7F3D0;
+  --pastel-lavender: #E9D5FF;
+  --pastel-peach: #FDBA74;
+}
+
+body {
+  @apply bg-[#121212] text-white/87 font-sans antialiased overflow-hidden h-screen m-0 p-0;
+}
+
+/* Minimalist scrollbars */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.elastic-transition {
+  transition: flex 0.3s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.typewriter-cursor::after {
+  content: " ";
+  display: inline-block;
+  width: 6px;
+  height: 1.1em;
+  background-color: var(--pastel-sage);
+  margin-left: 4px;
+  vertical-align: text-bottom;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-sage {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(167, 243, 208, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 10px 2px rgba(167, 243, 208, 0.3);
+  }
+}
+
+.pulse-sage {
+  animation: pulse-sage 2s infinite;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

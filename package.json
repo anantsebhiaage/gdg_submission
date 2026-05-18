@@ -1,0 +1,11 @@
+{
+  "name": "nextgen-fanzone-root",
+  "version": "1.0.0",
+  "description": "NextGen FanZone — Real-time AI Sports Engagement Platform",
+  "scripts": {
+    "start": "concurrently \"npm run server --prefix backend\" \"npm run dev --prefix frontend\""
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
